@@ -1,0 +1,97 @@
+<html>
+	<head>
+		<style>
+			body { margin: 0; }
+			canvas { width: 100%; height: 100% }
+			#gui 
+			{
+				padding-left: 30;
+				padding-right: 30;
+				margin-left: 10;
+				margin-top: 10;
+
+				position: absolute;
+				z-index: 5;
+
+				color: white;
+				text-align: center;
+
+				border-style: solid;
+				border-radius: 15px;
+				border-width: 5px;
+				border-color: white;
+			}
+			#info
+			{
+				padding-left: 30;
+				padding-right: 30;
+				margin-left: 10;
+				margin-bottom: 10;
+
+				bottom: 0px;
+
+				position: absolute;
+				z-index: 5;
+
+				color: black;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- GRAPHICAL USER INTERFACE -->
+
+
+		<div id="info">
+			<p>[if song is not playing - hit 'ENTER']</p>
+		</div>
+		<div id="gui">
+			<h2>-controls-</h2>
+			<h4><i class="fas fa-arrow-up"></i> &emsp; <i class="fas fa-volume-up"></i></h4>
+			<h4><i class="fas fa-arrow-down"></i> &emsp; <i class="fas fa-volume-down"></i></h4>
+			<h4>M &emsp; <i class="fas fa-volume-mute"></i></h4>
+			<h4>F &emsp; <i class="fas fa-smog"></i></h4>
+			<h4>R &emsp; <i class="fas fa-sync-alt"></i></h4>
+		</div>
+
+		<!-- AUDIO -->
+		<audio id="bg" autoplay>
+			<source src="sfx/bgSong.mp3" type="audio/mpeg">
+		</audio>
+
+		<!-- LIBRARIES -->
+		<script src="https://kit.fontawesome.com/b9c32c8b76.js" crossorigin="anonymous"></script>
+		<script src="lib/three.min.js"></script>
+        <script src="lib/OrbitControls.js"></script>
+
+		<!-- UTILITIES -->
+		<script src="utils.js"></script>
+
+		<!-- TEXTURES -->
+		<script src="textures/skyTile.js"></script>
+		<script src="textures/asphaltTile.js"></script>
+		<script src="textures/brickTile.js"></script>
+		<script src="textures/grayBrickTile.js"></script>
+		<script src="textures/stoneWallTile.js"></script>
+		<script src="textures/concreteTile.js"></script>
+		<script src="textures/crackedConcreteTile.js"></script>
+		<script src="textures/flatTile.js"></script>
+		<script src="textures/whiteWoodTile.js"></script>
+		<script src="textures/windowTile.js"></script>
+		<script src="textures/woodDoorTile.js"></script>
+		<script src="textures/fCloudTile.js"></script>
+		<script src="textures/sCloudTile.js"></script>
+		<script src="textures/tCloudTile.js"></script>
+		
+		<!-- INITIALIZATION -->
+		<script src="keyboardManager.js"></script>
+		<script src="init.js"></script>
+		
+		<!-- GENERATOR IMPORTS-->
+		<script src="objects/house.js"></script>
+		<script src="objects/clouds.js"></script>
+
+		<!-- CONTROLLER CLASS - WHERE THE MAGIC HAPPENS -->
+		<script src="controller.js"></script>
+	</body>
+</html>
